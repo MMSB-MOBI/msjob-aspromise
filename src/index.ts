@@ -13,7 +13,7 @@ export class PromiseManager {
     }
 
     async start() {
-
+        console.log(this.port,  this.TCPip )
         return new Promise((res, rej) => {
             if (this._connect) res(true)
             else{
@@ -85,7 +85,7 @@ export class PromiseManager {
                     stdout.on('end', () => {
                         const _ = Buffer.concat(chunks).toString('utf8');
                         try {
-                            const data = JSON.parse(_)
+                            const data =  _
                             res(data);
                         } catch (e) {
                             rej(e);
@@ -93,7 +93,8 @@ export class PromiseManager {
                     });
                     stderr.on('data', (chunk: Uint8Array) => errchunks.push(chunk))
                     stderr.on('end', () => {
-                        if (errchunks) {
+                        if (errchunks.length > 0) {
+                            console.log('FUCK')
                             const _ = Buffer.concat(errchunks).toString('utf8');
                             console.log(`erreur standard job>${_}<`);
                             if (_) rej(_)
