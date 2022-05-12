@@ -1,0 +1,25 @@
+{
+  "name": "msjob-aspromise",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MMSB-MOBI/msjob-aspromise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MMSB-MOBI/msjob-aspromise/issues"
+  },
+  "homepage": "https://github.com/MMSB-MOBI/msjob-aspromise#readme",
+  "dependencies": {
+    "ms-jobmanager": "^2.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
